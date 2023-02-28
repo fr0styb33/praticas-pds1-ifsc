@@ -1,8 +1,8 @@
 package controle;
 
  import java.util.ArrayList;
- 
- import modelo.Funcionario;
+
+import modelo.Funcionario;
 
 public class FuncionarioDAO {
 
