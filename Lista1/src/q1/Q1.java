@@ -20,7 +20,7 @@ public class Q1 {
 	//metodo que chama o preco e quant
 	public static void totalPagamento(Double precoLitro, Integer quantidadeLitros) {
 		
-		//fazer o calculo(descobrir como faz SoS)
+		//fazer o calculo
 		
 	}
 	
