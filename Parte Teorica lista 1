@@ -1,3 +1,5 @@
+LISTA 1
+
 1.É o código-fonte compilado que possibilita adicionar novas funções ao software do código-fonte.
 2. A biblioteca swing nos dá a possibilidade de criar interfaces gráficas ao nosso software.
 3.A)JButton
@@ -7,4 +9,5 @@ D)JProgressBar
 E)JRadioButton
 F)JComboBox
 4.Ajudam as janelas a se tornarem mais genéricas e adaptáveis a modificações. Existe o FlowLayout e o GridLayout
-5. 
+5. Utilizando o "itsEmpty();" conseguimos validar o campo de texto, veirficando se está nulo ou não.
+
