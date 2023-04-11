@@ -5,34 +5,34 @@ import javax.swing.JOptionPane;
 public class ex1 {
 
 	public static void main(String[] args) {
-		
-		String precoL = JOptionPane.showInputDialog("Digite o preço (por litro): ");
+		String precoS = JOptionPane.showInputDialog("Digite o preço por litro");
+		String quantidadeLitroS = JOptionPane.showInputDialog("Digite a quantidade por litro ");
 		Double precoLitro = 0.0;
-		String quantL = JOptionPane.showInputDialog("Digite a quantidade (por litro): ");
-		Integer quantidadeLitros = 0;
+		Integer quantidadeLitro = 0;
 
-		if(precoL.isEmpty()) {
-			JOptionPane.showMessageDialog(null, "Insira algum valor!");
+		if (precoS.isEmpty()) {
+			JOptionPane.showMessageDialog(null, "Insira um valor!");
+
+		} else {
+			precoLitro = Double.valueOf(precoS);
 		}
-		else {
-			precoLitro = Double.valueOf(precoL);
+
+		if (quantidadeLitroS.isEmpty()) {
+			JOptionPane.showMessageDialog(null, "Insira um valor!");
+
+		} else {
+			quantidadeLitro = Integer.valueOf(quantidadeLitroS);
+
 		}
-		if(quantL.isEmpty()) {
-			JOptionPane.showMessageDialog(null, "Insira algum valor!");
-		}
-		else {
-			quantidadeLitros = Integer.valueOf(quantL);
-	
-		}
-		
-		totalPagamento(precoLitro, quantidadeLitros);
+
+		totalPagamento(precoLitro, quantidadeLitro);
+	}
+
+	public static void totalPagamento(Double precoLitro, Integer quantidadeLitro) {
+
+		double calc = precoLitro * quantidadeLitro;
+
+		JOptionPane.showMessageDialog(null, "Valor total do pagamento" + calc);
 	}
 	
-		public static void totalPagamento(Double precoLitro, Integer quantidadeLitros) {
-		  double calculo = precoLitro * quantidadeLitros;
-		  	JOptionPane.showMessageDialog(null,"Valor total do pagamento: " + calculo);
-		  	
-
-	    }
-
-   }
+}

@@ -4,35 +4,40 @@ import javax.swing.JOptionPane;
 
 public class ex3 {
 
-	public static void main (String[] args) {
-	
-		String nota1 = JOptionPane.showInputDialog("Digite a primeira nota: ");
-		String nota2 = JOptionPane.showInputDialog("Digite a segunda nota: ");
-		String nota3 = JOptionPane.showInputDialog("Digite a terceira nota: ");
-		
-		Double notaU = 0.0;
-		Double notaD = 0.0;
-		Double notaT = 0.0;
+		public static void main(String[] args) {
 
-		notaU = Double.valueOf(nota1);
-		notaD = Double.valueOf(nota2);
-		notaT = Double.valueOf(nota3);
-		
-		calculaMF (notaU, notaD, notaT);
-		
-	}
-	public static void calculaMF (Double notaU, Double notaD, Double notaT) {
-		
-		Double MF =(notaU + notaD + notaT) / 3;
-		
-		if(MF >= 6) {
-			JOptionPane.showMessageDialog(null, "Aprovado(a)! \n Média: " +MF);
+			String notaU = JOptionPane.showInputDialog("Digite a primeira nota");
+			String notaD = JOptionPane.showInputDialog("Digite a segunda nota");
+			String notaT = JOptionPane.showInputDialog("Digite a terceira nota");
+
+			Double nota1 = 0.0;
+			Double nota2 = 0.0;
+			Double nota3 = 0.0;
+
+			nota1 = Double.valueOf(notaU);
+
+			nota2 = Double.valueOf(notaD);
+
+			nota3 = Double.valueOf(notaT);
+
+			calcMedia(nota1, nota2, nota3);
+
 		}
-		   if(MF >= 4 && MF < 6) {
-			JOptionPane.showMessageDialog(null, "Recuperação! \n Média: " +MF);
-		   }
-		     if(MF < 4) {
-			  JOptionPane.showMessageDialog(null, "Reprovado! \n Média: " +MF);
-		      }
+
+		public static void calcMedia(Double nota1, Double nota2, Double nota3) {
+			Double mediaFinal = (nota1 + nota2 + nota3) / 3;
+
+			if (mediaFinal >= 6) {
+				JOptionPane.showMessageDialog(null, "Aluno aprovado! Média: " + mediaFinal);
+			}
+
+			if (mediaFinal >= 4 && mediaFinal < 6) {
+				JOptionPane.showMessageDialog(null, "Aluno de recuperação! Média: " + mediaFinal);
+			}
+
+			if (mediaFinal < 4) {
+				JOptionPane.showMessageDialog(null, "Aluno reprovado! Média: " + mediaFinal);
+			}
+		}
+
 	}
-}

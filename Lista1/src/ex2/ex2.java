@@ -6,14 +6,15 @@ import javax.swing.JOptionPane;
 
 public class ex2 {
 
-	public static void main (String[] args) {
-		
-		ArrayList<String> lista = new ArrayList<String>();
-		
-		for(int i = 0; i < 5; i++) {
-			String valor = JOptionPane.showInputDialog("Digite os valores a serem colocados na lista: ");
-			lista.add(valor);
+		public static void main(String[] args) {
+			ArrayList<String> lista = new ArrayList<String>();
+
+			for (int i = 0; i < 5; i++) {
+				String valorL = JOptionPane.showInputDialog("Digite o que será adicionado: ");
+
+				lista.add(valorL);
+
+			}
+			JOptionPane.showMessageDialog(null, lista);
 		}
-		JOptionPane.showMessageDialog(null, lista);
-	}
 }
